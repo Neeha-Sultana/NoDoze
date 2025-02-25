@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fbffe4;
+  color: #1e2a38; /* Dark color for better readability */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #3d8d7a;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+nav h1 {
+  margin: 0;
+  color: #fbffe4;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fbffe4;
+  font-weight: bold;
+}
+/* Navigation Hover Effect */
+nav ul li a:hover {
+  background: #3d8d7a;
+  color: #fbffe4;
+}
+
+/* Main Content */
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+header h2 {
+  font-size: 2em;
+  color: #3d8d7a;
+}
+
+header img {
+  width: 50%;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+/* Reduce Image Size */
+.info img {
+  width: 50%; /* Adjust the size */
+  max-width: 500px; /* Limit maximum size */
+  display: block;
+  margin: 10px auto; /* Center the image */
+  border-radius: 8px;
+}
+
+/* Center and Reduce Size of Try Now Button */
+.button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.info h2 {
+  color: #2a4d3e; /* Darker shade for better visibility */
+  font-size: 1.8em;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #5e9689;
+  padding: 8px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background: #3d8d7a; /* Darker Green */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Contact Form */
+.contact-form {
+  background: #b3d8a8;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  margin: 20px auto;
+}
+
+.contact-form input {
+  width: 90%;
+  padding: 8px;
+  border: 2px solid #3d8d7a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Fields Focus Effect */
+.contact-form input:focus {
+  border-color: #a3d1c6;
+  box-shadow: 0px 0px 5px rgba(61, 141, 122, 0.5);
+}
+
+.contact-form button {
+  background: #3d8d7a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer (Always at Bottom) */
+footer {
+  background: #3d8d7a;
+  color: #fbffe4;
+  padding: 15px;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Start Camera Button */
+.start-btn {
+  background: #669b90; /* Green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+/* Stop Camera Button */
+.stop-btn {
+  background: #f44336; /* Red */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+/* Footer Links */
+footer p a {
+  color: #fbffe4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Footer Hover Effect */
+footer p a:hover {
+  color: #a3d1c6;
+}
+
+.why-detection {
+  background: #78c2b3;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.how-it-works {
+  text-align: center;
+  padding: 20px;
+  background: #fbffe4;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.step {
+  text-align: center;
+  width: 30%;
+}
+
+.step img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+/* Increase Space Between Images */
+img {
+  display: block;
+  margin: 20px auto; /* Adds space above and below the images */
+  max-width: 300px; /* Adjust image size */
+  border-radius: 8px;
+}
+
+.contact-section {
+  padding: 20px;
+  background: #b3d8a8;
+  border-radius: 8px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.faq {
+  background: #fbffe4;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+}
+
+.faq h2 {
+  text-align: left;
+  font-weight: bold; /* Keep FAQ title bold */
+}
+
+/* Keep only the questions bold */
+.faq details summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* Make answers normal weight */
+.faq details p {
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.large-video {
+  width: 1000px;  /* Increase width */
+  height: 700px;  /* Increase height */
+  border: 5px solid #3d8d7a; /* Green border */
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+}
+
+.responsive-video {
+  width: 90%; /* Adjust based on screen size */
+  max-width: 900px; /* Maximum width */
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  border: 5px solid #3d8d7a; /* Green border */
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+}

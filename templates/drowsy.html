@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <h1>Drowsiness Detection</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/drowsy">Try Detection</a></li>
+        </ul>
+    </nav>
+
+    <section class="detection">
+        <h2>Live Drowsiness Detection</h2>
+
+        {% if camera_running %}
+        <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Live Camera Feed" class="responsive-video">
+
+
+            <form action="/stop_camera" method="POST">
+                <button type="submit" class="btn stop-btn">🛑 Stop Camera</button>
+            </form>
+        {% else %}
+            <p>🔴 Camera is OFF</p>
+            <form action="/start_camera" method="POST">
+                <button type="submit" class="btn start-btn">▶️ Start Camera</button>
+            </form>
+        {% endif %}
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NoDoze | Created by NMIT Students</p>
+    </footer>
+</body>
+</html>

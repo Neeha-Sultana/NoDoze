@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | NoDoze: Drowsiness Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <h1>NoDoze: Drowsiness Detection</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/drowsy">Try Detection</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="info">
+            <h2>Stay Alert, Stay Safe!</h2>
+            <p>
+                Drowsy driving is a major cause of road accidents. Our AI-powered system monitors driver fatigue in real-time,  
+                alerts emergency contacts, and helps prevent accidents.  
+            </p>
+            <img src="{{ url_for('static', filename='person.jpg') }}" alt="Drowsy Driver Detection">
+            <div class="button-container">
+                <a href="/drowsy" class="btn">Try Now</a>
+            </div>
+        </section>
+    
+        <section class="why-detection">
+            <h2>Why Drowsiness Detection Matters ?</h2>
+            <p>
+                Every year, drowsy driving causes thousands of accidents worldwide.  
+                Fatigue reduces reaction time, impairs judgment, and increases the risk of road mishaps.  
+                Our AI-powered solution helps detect signs of drowsiness early to prevent accidents before they happen!
+            </p>
+        </section>
+
+        <section class="how-it-works">
+            <h2>⚙️ How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="{{ url_for('static', filename='camera-icon.png') }}" alt="Camera">
+                    <p>1. The camera detects facial features.</p>
+                </div>
+                <div class="step">
+                    <img src="{{ url_for('static', filename='ai-icon.png') }}" alt="AI Processing">
+                    <p>2. AI analyzes eye movements and head position.</p>
+                </div>
+                <div class="step">
+                    <img src="{{ url_for('static', filename='alert-icon.png') }}" alt="Alert">
+                    <p>3. If drowsiness is detected, an alert is triggered.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="contact-form">
+            <h2>Set Emergency Contact</h2>
+            <form action="/save_contact" method="POST">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="tel" name="phone" placeholder="Enter phone number" required>
+                <button type="submit" class="btn">Save Contact</button>
+            </form>
+            {% if contact %}
+            <p>✔ Contact Saved: {{ contact.name }} ({{ contact.phone }})</p>
+            {% endif %}
+        </section>
+    </div>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>Does this work at night?</summary>
+            <p>Yes! Our AI system detects eye movements even in low-light conditions.</p>
+        </details>
+        <details>
+            <summary>Is an internet connection required?</summary>
+            <p>No, the detection works offline. However, the alert system needs internet for messages.</p>
+        </details>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 NoDoze | Created by NMIT Students</p>
+    </footer>
+</body>
+</html>
