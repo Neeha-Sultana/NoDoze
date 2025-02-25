@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, Response
 import cv2
 import dlib
 import time
-import pygame
+#import pygame
 import requests
 from scipy.spatial import distance
 from twilio.rest import Client
@@ -48,12 +48,13 @@ client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 # Google Geolocation API for accurate location tracking
 GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY"
 
+'''
 # Initialize pygame for sound alerts
 pygame.mixer.init()
 ALERT_SOUND = "song.mp3"  # Ensure this file exists in the project directory
 alert_playing = False
 alert_sent = False
-
+'''
 # Load the face detector and landmark predictor
 # Load the face detector and landmark predictor
 detector = dlib.get_frontal_face_detector()
@@ -129,7 +130,7 @@ def make_voice_call():
             print("📞 Voice call placed successfully!")
         except Exception as e:
             print(f"❌ Error making call: {e}")
-
+'''
 def play_alert_sound():
     """Play an alert sound."""
     global alert_playing
@@ -138,12 +139,14 @@ def play_alert_sound():
         pygame.mixer.music.play(-1)
         alert_playing = True
 
+
 def stop_alert_sound():
     """Stops the alert sound immediately."""
     global alert_playing
     if alert_playing:
         pygame.mixer.music.stop()  # Stop sound
         alert_playing = False  # Reset flag
+'''
 
 # Global flag to control video streaming
 camera_running = True  
